@@ -33,7 +33,7 @@ const binarySearch = (array, item) => {
 let array = [-1,0,3,5,9,12];
 let item = 12;
 console.log(binarySearch(array, item));
-
+//
 // let middle = Math.floor(array.length / 2);
 //
 // console.log(array[middle] === item); //false, so do our checks and cut accordingly
