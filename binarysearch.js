@@ -30,30 +30,29 @@ const binarySearch = (array, item) => {
     return null;
 }
 
-let array = [-1,0,3,5,9,12];
-let item = 12;
-console.log(binarySearch(array, item));
-//
-// let middle = Math.floor(array.length / 2);
-//
-// console.log(array[middle] === item); //false, so do our checks and cut accordingly
-//
-// if (item > array[middle]) {
-//     middle = Math.floor(middle / 2) + middle;
-// } else if (item < array[middle]) {
-//     middle = Math.floor(middle / 2);
-// }
-//
-// console.log(middle);
-//
-// console.log(array[middle] === item)
-//
-// if (item > array[middle]) {
-//     middle = Math.floor(middle / 2) + middle;
-// } else if (item < array[middle]) {
-//     middle = Math.floor(middle / 2);
-// }
-// console.log(middle);
-// console.log(array[middle] === item)
-//
-// if (middle === 0 || middle === array.length) console.log(false);
+
+const binarySearchCorrect = (array, item) => {
+
+    let low = 0;
+    let high = array.length - 1;
+
+    while (low <= high) {
+
+        let middleIndex = Math.floor((low + high) /2);
+
+        if (array[middleIndex] === item) {
+            return middleIndex;
+        } else if (array[middleIndex] > item){
+            //lower the bound
+            high = middleIndex - 1;
+        } else {
+            low = middleIndex + 1;
+        }
+
+    }
+
+    return null
+
+}
+
+console.log(binarySearchCorrect([1,2,3,4,5,6,7,8], 5))
