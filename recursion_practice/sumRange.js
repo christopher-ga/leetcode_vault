@@ -6,5 +6,5 @@ function sumRange(range) {
     } else return sumRange(range - 1) + range;
 
 }
-
+//
 console.log(sumRange(3));
