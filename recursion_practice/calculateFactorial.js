@@ -6,5 +6,6 @@ function calculateFactorial(n) {
 
 }
 //
+//
 
 console.log(calculateFactorial(5));
